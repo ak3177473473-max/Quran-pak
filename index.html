@@ -858,7 +858,7 @@
         <div class="continue-card">
             <div class="continue-icon"><i class="fa-solid fa-bookmark"></i></div>
             <div class="continue-title">Continue Reading?</div>
-            <div class="continue-text" id="continue-text">Aap ne Paara <strong>X</strong> padhna chhoda tha.</div>
+            <div class="continue-text" id="continue-text">Aap ne Paara <strong>X</strong> padhna chor dia tha.</div>
             <div class="continue-actions">
                 <button class="continue-btn primary" id="continue-yes">Continue</button>
                 <button class="continue-btn secondary" id="continue-no">Start Fresh</button>
@@ -1723,7 +1723,7 @@ const App = {
         const minutesAgo = (Date.now() - lastTime) / 60000;
         if (lastRead.paraId && lastRead.ayahIndex !== undefined && minutesAgo < 24 * 60 && minutesAgo > 2 && store.toggles.saveLastRead) {
             const meta = PARA_NAMES.find(p => p.id === lastRead.paraId);
-            UI.els.continueText.innerHTML = `Aap ne <strong>Para ${lastRead.paraId} (${meta.ar})</strong> padhna chhoda tha — Ayah ${lastRead.ayahIndex + 1} par.`;
+            UI.els.continueText.innerHTML = `Aap ne <strong>Para ${lastRead.paraId} (${meta.ar})</strong> padhna chor dia tha — Ayah ${lastRead.ayahIndex + 1} par.`;
             UI.els.continuePrompt.classList.add('show');
             const handler = () => {
                 UI.els.continuePrompt.classList.remove('show');
